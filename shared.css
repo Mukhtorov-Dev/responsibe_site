@@ -226,14 +226,14 @@ a {
     margin-top: 90px;
 }
 
-.main__div {
-    display: inline-block;
-    vertical-align: middle;
+.main-header .container {
+    display: flex;
+    align-items: center;
 }
 
 .main__div img {
-    width: 150px;
-    height: 80px;
+    width: 100px;
+    height: 50px;
 }
 .main-nav {
     display: inline-block;
@@ -243,10 +243,36 @@ a {
     display: inline-block;
     vertical-align: middle;
 }
+
+.main-nav__items .space {
+    padding-left: 400px;
+}
+
+.extra-item {
+    display: inline-block;
+    padding: 0.625rem;
+}
+
+.extra-item a {
+    color: darkgray;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.extra-item a:hover {
+    color: #efb6df;
+}
+.extra-item.active a {
+    color: #efb6df;
+}
+
 .main-nav__item {
     display: inline-block;
     padding: 0.625rem;
 }
+
 .main-nav__item a {
     color: darkgray;
     text-decoration: none;
@@ -262,6 +288,79 @@ a {
     color: #efb6df;
 }
 
+.sub-menu {
+    display: none;
+    padding: 0;
+}
+
+.sub {
+    display: none;
+}
+
+.sub:hover .sub-menu {
+    display: block;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -15px;
+    background-color: #444;
+}
+.sub:hover .sub-menu ul {
+    display: block;
+    padding: 0;
+}
+
+.sub:hover .sub-menu ul li {
+    width: 90px;
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+    display: block;
+}
+
+.sub:hover .sub-menu ul li a {
+    color: white;
+}
+
+.sub:hover .sub-menu ul li:hover {
+    background-color: #555;
+    display: block;
+}
+
+.sub-menu ul li a:hover {
+    color: #efb6df;
+}
+
+.sub-menu .main-nav__items .main-nav__item a:hover, .sub-menu .main-nav__items .main-nav__item a {
+    color: #efb6df;
+}
+
+.main-flag__items {
+    display: inline-block;
+    float: right;
+    padding-left: 100px;
+    margin: 0;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.flag-item h5{
+    text-align: center;
+}
+
+.flag-item:hover, .flag-item.active {
+    text-decoration: underline;
+}
+
+.extra-item .image .russian_flag {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    float: right;
+}
+
 /* Footer section styles */
 .footer {
     margin-top: 50px;
@@ -271,8 +370,8 @@ a {
 }
 
 .footer__brand img {
-    width: 150px;
-    height: 80px;
+    width: 100px;
+    height: 50px;
     margin-top: 20px;
 }
 
@@ -333,8 +432,12 @@ a {
         width: 90%;
     }
     /* Navigation menu */
-    .main-nav {
+    .main-nav__item {
         display: none;
+    }
+
+    .sub {
+        display: flex;
     }
 
     /* Footer section */
